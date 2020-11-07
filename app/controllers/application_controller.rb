@@ -5,7 +5,6 @@ class ApplicationController < ActionController::API
   private
 
   def authenticate_request
-    print request.headers
     @current_user = AuthorizeApiRequest.call(request.headers).result
     render json: { error: 'Not Authenticated' }, status: 401 unless @current_user
   end
