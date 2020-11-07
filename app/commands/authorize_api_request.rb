@@ -1,22 +1,19 @@
 class AuthorizeApiRequest
   prepend SimpleCommand
-  attr_reader :headers
   def initialize(headers = {})
     @headers = headers
   end
 
   def call
-    print 'from authorize call method'
     user
   end
 
   private
 
-  # attr_reader :headers
+  attr_reader :headers
 
   def user
     @user ||= User.find(decoded_auth_token[:user_id]) if decoded_auth_token
-    print "#{@user} --> user from authorize api request"
     @user || errors.add(:token, 'Invalid token') && nil
   end
 
