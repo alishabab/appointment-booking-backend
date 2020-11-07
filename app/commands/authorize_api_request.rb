@@ -6,6 +6,7 @@ class AuthorizeApiRequest
   end
 
   def call
+    print 'from authorize call method'
     user
   end
 
