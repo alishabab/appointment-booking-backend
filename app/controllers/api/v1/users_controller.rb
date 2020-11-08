@@ -4,7 +4,7 @@ class Api::V1::UsersController < ApplicationController
     user = User.create(user_params)
     if user.valid?
       command = AuthenticateUser.call(params[:email], params[:password])
-      render json: { user: user, jwt: command.result }
+      render json: { user: user, jwt: command.result }, status: :created
     else
       render json: { errors: user.errors.full_messages }, status: :not_acceptable
     end
