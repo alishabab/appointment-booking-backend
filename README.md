@@ -61,7 +61,7 @@ Then open a web page and go to [port 3001 on your local machine.](http://localho
 
 Public API url is [https://frozen-river-95471.herokuapp.com/](https://frozen-river-95471.herokuapp.com/)
 You can test all the API endpoints in any API testing tools like Postman.
-See API documentation [here](https://github.com/alishabab/appointment-booking-backend/blob/api-development/docs/API.md)
+See API documentation [here](https://documenter.getpostman.com/view/3801944/TVmMfcaU)
 
 ## Running tests
 
